@@ -1,0 +1,23 @@
+nav {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    margin-right: 60px;
+}
+    nav div {
+        padding: 0 15px;
+    }
+
+main > section:first-of-type {
+    display: flex;
+    justify-content: center;
+}
+
+    section:first-child video {
+        width: 1080px;
+        height: 100%;
+    }
+
+main > div {
+    display: flex;
+}
