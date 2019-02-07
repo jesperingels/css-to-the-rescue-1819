@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2017, Codrops
  * http://www.codrops.com
  */
@@ -138,7 +138,7 @@
 	function removeTilt() {
 		tilt = false;
 	}
-	
+
 	function move(opts) {
 		return new Promise(function(resolve, reject) {
 			if( isMoving && !opts.stopTransition ) {
@@ -161,7 +161,7 @@
 			else {
 				resolve();
 			}
-			
+
 		});
 	}
 
@@ -176,13 +176,13 @@
 						// transform values
 						rotX = tiltRotation.rotateX ? initTransform.rotateX -  (2 * tiltRotation.rotateX / win.height * mousepos.y - tiltRotation.rotateX) : 0,
 						rotY = tiltRotation.rotateY ? initTransform.rotateY -  (2 * tiltRotation.rotateY / win.width * mousepos.x - tiltRotation.rotateY) : 0;
-			
+
 					// apply transform
 					applyRoomTransform({
-						'translateX' : initTransform.translateX, 
-						'translateY' : initTransform.translateY, 
-						'translateZ' : initTransform.translateZ, 
-						'rotateX' : rotX + 'deg', 
+						'translateX' : initTransform.translateX,
+						'translateY' : initTransform.translateY,
+						'translateZ' : initTransform.translateZ,
+						'rotateX' : rotX + 'deg',
 						'rotateY' : rotY + 'deg',
 						'rotateZ' : initTransform.rotateZ
 					});
@@ -192,7 +192,7 @@
 			debounceResizeFn = debounce(function() {
 				win = {width: window.innerWidth, height: window.innerHeight};
 			}, 10);
-		
+
 		document.addEventListener('mousemove', onMouseMoveFn);
 		window.addEventListener('resize', debounceResizeFn);
 
@@ -244,7 +244,7 @@
 			},
 			translateY: function(t, i) {
 				return dir === 'in' ? [150,0] : [0,-150];
-			}	
+			}
 		};
 		if( dir === 'in' ) {
 			animeOpts.begin = function() {
@@ -272,9 +272,9 @@
 			return false;
 		}
 		isNavigating = true;
-		
+
 		var room = DOM.rooms[currentRoom];
-		
+
 		// Remove tilt.
 		removeTilt();
 		// Animate the current slide out - animate the name, title and date elements.
@@ -292,7 +292,7 @@
 		var nextRoom = DOM.rooms[currentRoom];
 		nextRoom.style.transform = 'translate3d(' + (dir === 'next' ? 100 : -100) + '%,0,0) translate3d(' + (dir === 'next' ? 1 : -1) + 'px,0,0)' ;
 		nextRoom.style.opacity = 1;
-		
+
 		// Move back.
 		move({transition: roomTransition, transform: resetTransform})
 		.then(function() {
@@ -317,7 +317,7 @@
 			applyRoomTransition('none');
 			nextRoom.style.transform = 'translate3d(0,0,0)';
 			applyRoomTransform(initTransform);
-			
+
 			setTimeout(function() {
 				initTilt();
 			}, 60);
@@ -392,7 +392,7 @@
 			// Remove adjacent rooms.
 			//removeAdjacentRooms();
 			// Init tilt.
-			initTilt();	
+			initTilt();
 		});
 		anime.remove(DOM.menuItems);
 		anime({
@@ -523,7 +523,7 @@
 		// Show current slide.
 		showSlide(100);
 		// back to room view:
-		move({transform: initTransform, stopTransition: true}).then(function() {	
+		move({transform: initTransform, stopTransition: true}).then(function() {
 			initTilt();
 		});
 
