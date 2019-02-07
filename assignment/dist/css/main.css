@@ -1,0 +1,74 @@
+/*!
+ * project-name v0.0.1
+ * A description for your project.
+ * (c) 2019 YOUR NAME
+ * MIT License
+ * http://link-to-your-git-repo.com
+ */
+
+/**
+ * @section Base Styles
+ */
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+/* line 7, src/sass/components/_base.scss */
+html,
+body {
+  min-height: 100%;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+/* line 13, src/sass/components/_base.scss */
+body {
+  margin: 0 15px;
+}
+
+/* line 17, src/sass/components/_base.scss */
+header {
+  margin: 25px 0;
+}
+
+/* line 21, src/sass/components/_base.scss */
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 60px;
+}
+
+/* line 27, src/sass/components/_base.scss */
+nav div {
+  padding: 0 15px;
+}
+
+/* line 31, src/sass/components/_base.scss */
+article,
+aside {
+  margin: 0 15px;
+}
+
+/* line 36, src/sass/components/_base.scss */
+main > section:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 41, src/sass/components/_base.scss */
+section:first-child video {
+  width: 1080px;
+  height: 100%;
+}
+
+/* line 46, src/sass/components/_base.scss */
+main > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
