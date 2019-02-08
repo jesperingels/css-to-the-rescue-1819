@@ -4,6 +4,13 @@ body {
 }
 
     main {
+        /*position: absolute;*/
+        /*width: 100vw;*/
+        /*height: 100vh;*/
+        /*perspective: 75px;*/
+        /*perspective-origin: center;*/
+        /*overflow: hidden;*/
+
         position: relative;
         overflow: hidden;
         width: 100vw;
@@ -18,6 +25,8 @@ body {
         rotate3d(0, 0, 1, 0deg);
         height: 100%;
         transform-style: preserve-3d;
+
+
     }
 
         main section div:first-child {
@@ -33,20 +42,9 @@ body {
             font-size: 160px;
         }
 
-<<<<<<< HEAD
-        /*
-        Right wall
-        */
-        main div:last-child {
-            right: 0;
-            width: 185px;
-            height: 100vh;
-            transform-origin: right;
-            transform: rotateY(-45deg);
-        }
-
-=======
             main section div:first-child div {
+                /*position: absolute;*/
+
                 position: absolute;
                 display: flex;
                 justify-content: center;
@@ -58,6 +56,12 @@ body {
             Back wall
             */
             main section div:first-child div:first-child {
+                /*height: 36.5vh;*/
+                /*background: #e9e9e9;*/
+                /*width: 29%;*/
+                /*left: 35.5vw;*/
+                /*top: 31.7%;*/
+
                 width: 100vw;
                 height: 100vh;
                 background: #e9e9e9;
@@ -90,6 +94,11 @@ body {
             Bottom wall
             */
             main section div:first-child div:nth-child(2) {
+                /*width: 100vw;*/
+                /*bottom: 0;*/
+                /*top: 68%;*/
+                /*transform: rotate3d(1, 0, 0, 90deg) translate3d(0, 72px, 0);*/
+
                 top: 100%;
                 width: 100vw;
                 height: 4000px;
@@ -105,6 +114,10 @@ body {
             Right and left wall
             */
             main section div:first-child div:nth-child(n+4) {
+                /*width: 400px;*/
+                /*height: 400px;*/
+                /*background-color: #dbdbdb;*/
+
                 width: 4000px;
                 height: 100vh;
                 background: #dbdbdb;
@@ -114,6 +127,12 @@ body {
             Left wall
             */
             main section div:first-child div:nth-last-child(2) {
+                /*width: 185px;*/
+                /*height: 100vh;*/
+                /*transform: rotate3d(0,1,0, 45deg);*/
+                /*transform-origin: left;*/
+                /*transition: 400ms transform ease-in-out;*/
+
                 justify-content: flex-start;
                 transform: rotate3d(0, 1, 0, 90deg);
                 transform-origin: 0 50%;
@@ -123,9 +142,15 @@ body {
             Right wall
             */
             main section div:first-child div:last-child {
+                /*right: 0;*/
+                /*width: 185px;*/
+                /*height: 100vh;*/
+                /*transform-origin: right;*/
+                /*transform: rotate3d(0,1,0, -45deg);*/
+
                 right: 0;
                 justify-content: flex-end;
                 transform: rotate3d(0, 1, 0, -90.03deg);
                 transform-origin: 100% 50%;
             }
->>>>>>> Animate-room
+
