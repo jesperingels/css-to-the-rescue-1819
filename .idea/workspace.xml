@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1269cd92-324e-4db4-8ac5-134c199cf887" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/assignment/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assignment/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1470">
-              <caret line="98" column="2" lean-forward="true" selection-start-line="98" selection-start-column="2" selection-end-line="98" selection-end-column="2" />
+            <state relative-caret-position="1365">
+              <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -150,12 +149,12 @@
       <workItem from="1549372063913" duration="3851000" />
       <workItem from="1549533861195" duration="4048000" />
       <workItem from="1549543924669" duration="3213000" />
-      <workItem from="1549615007698" duration="4667000" />
+      <workItem from="1549615007698" duration="4794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15779000" />
+    <option name="totallyTimeSpent" value="15906000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="713" extended-state="6" />
@@ -249,8 +248,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="98" column="2" lean-forward="true" selection-start-line="98" selection-start-column="2" selection-end-line="98" selection-end-column="2" />
+        <state relative-caret-position="1365">
+          <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
         </state>
       </provider>
     </entry>
