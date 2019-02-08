@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="2bdbb8cd-50e7-4e59-a6de-3bc2e24d777f" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/Exhibition.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
@@ -14,6 +15,9 @@
       <change beforePath="$PROJECT_DIR$/../../assignment/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../assignment/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../assignment/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../assignment/index.html" afterDir="false" />
     </list>
+=======
+    <list default="true" id="2bdbb8cd-50e7-4e59-a6de-3bc2e24d777f" name="Default Changelist" comment="" />
+>>>>>>> parent of 48d5741a... Animation succes!
 =======
     <list default="true" id="2bdbb8cd-50e7-4e59-a6de-3bc2e24d777f" name="Default Changelist" comment="" />
 >>>>>>> parent of 48d5741a... Animation succes!
@@ -109,7 +113,10 @@
       <updated>1549628477215</updated>
       <workItem from="1549628478763" duration="519000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1549633758428" duration="928000" />
+=======
+>>>>>>> parent of 48d5741a... Animation succes!
 =======
 >>>>>>> parent of 48d5741a... Animation succes!
     </task>
@@ -117,7 +124,11 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="1447000" />
+=======
+    <option name="totallyTimeSpent" value="519000" />
+>>>>>>> parent of 48d5741a... Animation succes!
 =======
     <option name="totallyTimeSpent" value="519000" />
 >>>>>>> parent of 48d5741a... Animation succes!

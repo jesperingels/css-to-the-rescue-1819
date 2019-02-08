@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1269cd92-324e-4db4-8ac5-134c199cf887" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Inspiration/Exhibition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Inspiration/Exhibition/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/assignment/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/css/style.css" afterDir="false" />
+>>>>>>> parent of 48d5741a... Animation succes!
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,6 +37,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="1365">
               <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
 =======
@@ -56,6 +61,10 @@
             <state relative-caret-position="384">
               <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
 >>>>>>> parent of 95ff4d72... Delete comments
+=======
+            <state relative-caret-position="1665">
+              <caret line="111" column="57" selection-start-line="111" selection-start-column="57" selection-end-line="111" selection-end-column="57" />
+>>>>>>> parent of 48d5741a... Animation succes!
             </state>
           </provider>
         </entry>
@@ -189,6 +198,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="15906000" />
 =======
     <option name="totallyTimeSpent" value="20068000" />
@@ -199,6 +209,9 @@
 =======
     <option name="totallyTimeSpent" value="17704000" />
 >>>>>>> parent of 95ff4d72... Delete comments
+=======
+    <option name="totallyTimeSpent" value="17769000" />
+>>>>>>> parent of 48d5741a... Animation succes!
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="713" extended-state="6" />
@@ -293,8 +306,12 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../web-app-from-scratch-18-19/week1/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -312,6 +329,10 @@
         <state relative-caret-position="384">
           <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
 >>>>>>> parent of 95ff4d72... Delete comments
+=======
+        <state relative-caret-position="1665">
+          <caret line="111" column="57" selection-start-line="111" selection-start-column="57" selection-end-line="111" selection-end-column="57" />
+>>>>>>> parent of 48d5741a... Animation succes!
         </state>
       </provider>
     </entry>
