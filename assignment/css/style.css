@@ -1,8 +1,3 @@
-:root{
-    --pos-mouse-y:0;
-    --pos-mouse-x:0;
-}
-
 body {
     margin: unset;
     background-color: #cecece;
@@ -17,9 +12,9 @@ body {
     }
 
     main section {
-        transform: translate3d(0px, 0px, 100px)
-        rotate3d(1, 0, 0, var(--pos-mouse-y))
-        rotate3d(0, 1, 0, var(--pos-mouse-x))
+        transform: translate3d(0px, 0px, 500px)
+        rotate3d(1, 0, 0, -0.728278deg)
+        rotate3d(0, 1, 0, 0.103125deg)
         rotate3d(0, 0, 1, 0deg);
         height: 100%;
         transform-style: preserve-3d;
