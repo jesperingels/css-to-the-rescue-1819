@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bdbb8cd-50e7-4e59-a6de-3bc2e24d777f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assignment/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../assignment/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assignment/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../assignment/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="2bdbb8cd-50e7-4e59-a6de-3bc2e24d777f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
