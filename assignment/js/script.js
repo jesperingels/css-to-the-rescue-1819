@@ -19,7 +19,7 @@ input.addEventListener('input', dimming);
 function dimming() {
     let inputValueHigh, inputValueLow, inputValueMedium;
     inputValueMedium = (input.value / 2) + 25;
-    inputValueLow = input.value / 2;
+    inputValueLow = input.value / 2 + 10;
     inputValueHigh = (input.value / 2) + 50;
 
     document.documentElement.style.setProperty('--bg', inputValueMedium + '%');

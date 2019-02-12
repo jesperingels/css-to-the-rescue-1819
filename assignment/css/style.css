@@ -19,7 +19,7 @@ body {
         perspective: 2000px;
     }
 
-    main section {
+    main section[datatype='room-wrapper'] {
         transform: translate3d(0px, 0px, 100px)
         rotate3d(1, 0, 0, var(--pos-mouse-y))
         rotate3d(0, 1, 0, var(--pos-mouse-x))
@@ -28,7 +28,7 @@ body {
         transform-style: preserve-3d;
     }
 
-        main section div:first-child {
+        main section[datatype='room-wrapper'] > div:first-child {
             pointer-events: auto;
             opacity: 1;
             position: absolute;
@@ -41,7 +41,7 @@ body {
             font-size: 160px;
         }
 
-            main section div:first-child div {
+            main section[datatype='room-wrapper'] > div:first-child > div {
                 position: absolute;
                 display: flex;
                 justify-content: center;
@@ -52,7 +52,7 @@ body {
             /*
             Back wall
             */
-            main section div:first-child div:first-child {
+            main section[datatype='room-wrapper'] > div:first-child > div:first-child {
                 width: 100vw;
                 height: 100vh;
                 background-color: hsl(0,0%,var(--bg));
@@ -64,8 +64,8 @@ body {
             /*
             Top and bottom wall
             */
-            main section div:first-child div:nth-child(2),
-            main section div:first-child div:nth-child(3) {
+            main section[datatype='room-wrapper'] > div:first-child > div:nth-child(2),
+            main section[datatype='room-wrapper'] > div:first-child > div:nth-child(3) {
                 width: 400px;
                 height: 400px;
                 background-color: hsl(0, 0%, var(--bg-dark));
@@ -74,7 +74,7 @@ body {
             /*
             Top wall
             */
-            main section div:first-child div:nth-child(3) {
+            main section[datatype='room-wrapper'] > div:first-child > div:nth-child(3) {
                 bottom: 100%;
                 top:0;
                 width: 100vw;
@@ -88,7 +88,7 @@ body {
             /*
             Bottom wall
             */
-            main section div:first-child div:nth-child(2) {
+            main section[datatype='room-wrapper'] > div:first-child > div:nth-child(2) {
                 top: 100%;
                 width: 100vw;
                 height: 4000px;
@@ -97,7 +97,7 @@ body {
                 transform-origin: 50% 0%;
             }
 
-                main section div:first-child div:nth-child(2) span:hover {
+                main section[datatype='room-wrapper'] > div:first-child > div:nth-child(2) > span:hover {
                     transform: rotate3d(1, 0, 0, -90deg);
                     transition: 400ms ease-in-out;
                     transform-origin: bottom center;
@@ -106,7 +106,7 @@ body {
             /*
             Right and left wall
             */
-            main section div:first-child div:nth-child(n+4) {
+            main section[datatype='room-wrapper'] > div:first-child > div:nth-child(n+4) {
                 width: 4000px;
                 height: 100vh;
                 background: hsl(0, 0%, var(--bg-light));;
@@ -115,7 +115,7 @@ body {
             /*
             Left wall
             */
-            main section div:first-child div:nth-last-child(2) {
+            main section[datatype='room-wrapper'] > div:first-child > div:nth-last-child(2) {
                 justify-content: flex-start;
                 transform: rotate3d(0, 1, 0, 90deg);
                 transform-origin: 0 50%;
@@ -124,7 +124,7 @@ body {
                 /*
                 Left wall -> div
                 */
-                main section div:first-child div:nth-last-child(2) span:hover {
+                main section[datatype='room-wrapper'] > div:first-child > div:nth-last-child(2) span:hover {
                     transform: rotate3d(0, 1, 0, -90deg);
                     transform-origin: left center;
                     transition: 1000ms ease-out;
@@ -133,7 +133,7 @@ body {
             /*
             Right wall
             */
-            main section div:first-child div:last-child {
+            main section[datatype='room-wrapper'] > div:first-child > div:last-child {
                 right: 0;
                 justify-content: flex-end;
                 transform: rotate3d(0, 1, 0, -90.03deg);

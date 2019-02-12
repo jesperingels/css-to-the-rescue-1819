@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Add nonsense</title>
+	<title>Room</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <main>
 
-	<section>
+	<section datatype="room-wrapper">
 
 		<div>
 
@@ -21,7 +21,40 @@
 					<input type="range" min="1" max="100" value="70" class="slider" id="myRange">
 				</section>
 			</div>
-			<div></div>
+			<div>
+				<section style="transform-style: preserve-3d;">
+					<div style="
+					width: 144px;
+					height: 395px;
+					background: darkgrey;
+					position: absolute;
+					transform: translateZ(43px);
+					top: 41px;
+					transform-origin: left;"></div>
+					<div style="
+					width: 144px;
+					height: 85px;
+					background: black;
+					position: absolute;
+					transform: rotateX(90deg);
+					transform-origin: left;"></div>
+					<div style="
+					width: 144px;
+					height: 85px;
+					background: grey;
+					top: 390px;
+					position: absolute;
+					transform: rotateX(90deg);"></div>
+					<div style="
+					width: 41px;
+					height: 425px;
+					background: grey;
+					position: absolute;
+					transform: rotateY(-90deg);
+					left: 0;
+					transform-origin: left;"></div>
+				</section>
+			</div>
 			<div>
 				<span>Hello world!</span>
 			</div>
