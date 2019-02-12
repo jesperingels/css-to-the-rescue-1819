@@ -10,3 +10,21 @@ document.addEventListener('mousemove', function (e) {
     document.documentElement.style.setProperty('--pos-mouse-x', x + 'deg');
     document.documentElement.style.setProperty('--pos-mouse-y', y + 'deg');
 });
+
+var input = document.querySelector('input');
+
+
+input.addEventListener('input', dimming);
+
+function dimming() {
+    let inputValueHigh, inputValueLow, inputValueMedium;
+    inputValueMedium = (input.value / 2) + 25;
+    inputValueLow = input.value / 2;
+    inputValueHigh = (input.value / 2) + 50;
+
+    document.documentElement.style.setProperty('--bg', inputValueMedium + '%');
+    document.documentElement.style.setProperty('--bg-light', inputValueHigh + '%');
+    document.documentElement.style.setProperty('--bg-dark', inputValueLow + '%');
+}
+
+dimming();

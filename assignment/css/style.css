@@ -1,6 +1,9 @@
 :root{
     --pos-mouse-y:0;
     --pos-mouse-x:0;
+    --bg:white;
+    --bg-light:white;
+    --bg-dark:white;
 }
 
 body {
@@ -52,7 +55,7 @@ body {
             main section div:first-child div:first-child {
                 width: 100vw;
                 height: 100vh;
-                background: #e9e9e9;
+                background-color: hsl(0,0%,var(--bg));
                 box-shadow: 0 0 0 2px #e9e9e9;
                 transform: translate3d(0, 0, -4000px) rotate3d(1,0,0,0.1deg) rotate3d(1,0,0,0deg);
             }
@@ -65,16 +68,20 @@ body {
             main section div:first-child div:nth-child(3) {
                 width: 400px;
                 height: 400px;
-                background-color: #d0d0d0;
+                background-color: hsl(0, 0%, var(--bg-dark));
             }
 
             /*
             Top wall
             */
             main section div:first-child div:nth-child(3) {
+                bottom: 100%;
+                top:0;
                 width: 100vw;
-                top: 0;
-                transform: rotateX(33deg);
+                height: 4000px;
+                /*background: #d0d0d0;*/
+                transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -4000px, 0);
+                transform-origin: 50% 0%;
             }
 
 
@@ -85,7 +92,7 @@ body {
                 top: 100%;
                 width: 100vw;
                 height: 4000px;
-                background: #d0d0d0;
+                /*background: #d0d0d0;*/
                 transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -4000px, 0);
                 transform-origin: 50% 0%;
             }
@@ -102,7 +109,7 @@ body {
             main section div:first-child div:nth-child(n+4) {
                 width: 4000px;
                 height: 100vh;
-                background: #dbdbdb;
+                background: hsl(0, 0%, var(--bg-light));;
             }
 
             /*
@@ -133,3 +140,91 @@ body {
                 transform-origin: 100% 50%;
             }
 
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 14.5px 0;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #928483;
+    border-radius: 6.2px;
+    border: 0.9px solid #562425;
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #050000, 0px 0px 1px #1f0000;
+    border: 2.4px solid #000000;
+    height: 39px;
+    width: 16px;
+    border-radius: 2px;
+    background: #651817;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -15.4px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #9e9191;
+}
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #928483;
+    border-radius: 6.2px;
+    border: 0.9px solid #562425;
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #050000, 0px 0px 1px #1f0000;
+    border: 2.4px solid #000000;
+    height: 39px;
+    width: 16px;
+    border-radius: 2px;
+    background: #651817;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #867776;
+    border: 0.9px solid #562425;
+    border-radius: 12.4px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+    background: #928483;
+    border: 0.9px solid #562425;
+    border-radius: 12.4px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #050000, 0px 0px 1px #1f0000;
+    border: 2.4px solid #000000;
+    height: 39px;
+    width: 16px;
+    border-radius: 2px;
+    background: #651817;
+    cursor: pointer;
+    height: 10px;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #928483;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #9e9191;
+}
