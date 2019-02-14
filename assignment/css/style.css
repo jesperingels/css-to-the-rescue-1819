@@ -19,16 +19,18 @@ body {
         perspective: 2000px;
     }
 
-    main section[datatype='room-wrapper'] {
+    main [class='room-wrapper'] {
         transform: translate3d(0px, 0px, 100px)
         rotate3d(1, 0, 0, var(--pos-mouse-y))
         rotate3d(0, 1, 0, var(--pos-mouse-x))
         rotate3d(0, 0, 1, 0deg);
         height: 100%;
         transform-style: preserve-3d;
+        display: flex;
+        flex-direction: column;
     }
 
-        main section[datatype='room-wrapper'] > div:first-child {
+        main [class='room-wrapper'] > div:first-child {
             pointer-events: auto;
             opacity: 1;
             position: absolute;
@@ -39,20 +41,22 @@ body {
             margin: -50vh 0 0 -50vw;
             transform-style: preserve-3d;
             font-size: 160px;
+            min-width: 1000px;
         }
 
-            main section[datatype='room-wrapper'] > div:first-child > div {
+            main [class='room-wrapper'] > div:first-child > div {
                 position: absolute;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 transform-style: preserve-3d;
+                min-width: 1000px;
             }
 
             /*
             Back wall
             */
-            main section[datatype='room-wrapper'] > div:first-child > div:first-child {
+            main [class='room-wrapper'] > div:first-child > div:first-child {
                 width: 100vw;
                 height: 100vh;
                 background-color: hsl(0,0%,var(--bg));
@@ -64,8 +68,8 @@ body {
             /*
             Top and bottom wall
             */
-            main section[datatype='room-wrapper'] > div:first-child > div:nth-child(2),
-            main section[datatype='room-wrapper'] > div:first-child > div:nth-child(3) {
+            main [class='room-wrapper'] > div:first-child > div:nth-child(2),
+            main [class='room-wrapper'] > div:first-child > div:nth-child(3) {
                 width: 400px;
                 height: 400px;
                 background-color: hsl(0, 0%, var(--bg-dark));
@@ -74,7 +78,7 @@ body {
             /*
             Top wall
             */
-            main section[datatype='room-wrapper'] > div:first-child > div:nth-child(3) {
+            main [class='room-wrapper'] > div:first-child > div:nth-child(3) {
                 bottom: 100%;
                 top:0;
                 width: 100vw;
@@ -88,16 +92,17 @@ body {
             /*
             Bottom wall
             */
-            main section[datatype='room-wrapper'] > div:first-child > div:nth-child(2) {
+            main [class='room-wrapper'] > div:first-child > div:nth-child(2) {
                 top: 100%;
                 width: 100vw;
                 height: 4000px;
-                /*background: #d0d0d0;*/
                 transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -4000px, 0);
                 transform-origin: 50% 0%;
+                display: flex;
+                justify-content: space-evenly;
             }
 
-                main section[datatype='room-wrapper'] > div:first-child > div:nth-child(2) > span:hover {
+                main [class='room-wrapper'] > div:first-child > div:nth-child(2) > span:hover {
                     transform: rotate3d(1, 0, 0, -90deg);
                     transition: 400ms ease-in-out;
                     transform-origin: bottom center;
@@ -106,7 +111,7 @@ body {
             /*
             Right and left wall
             */
-            main section[datatype='room-wrapper'] > div:first-child > div:nth-child(n+4) {
+            main [class='room-wrapper'] > div:first-child > div:nth-child(n+4) {
                 width: 4000px;
                 height: 100vh;
                 background: hsl(0, 0%, var(--bg-light));;
@@ -115,8 +120,8 @@ body {
             /*
             Left wall
             */
-            main section[datatype='room-wrapper'] > div:first-child > div:nth-last-child(2) {
-                justify-content: flex-start;
+            main [class='room-wrapper'] > div:first-child > div:nth-last-child(2) {
+                justify-content: center;
                 transform: rotate3d(0, 1, 0, 90deg);
                 transform-origin: 0 50%;
             }
@@ -124,7 +129,7 @@ body {
                 /*
                 Left wall -> div
                 */
-                main section[datatype='room-wrapper'] > div:first-child > div:nth-last-child(2) span:hover {
+                main [class='room-wrapper'] > div:first-child > div:nth-last-child(2) span:hover {
                     transform: rotate3d(0, 1, 0, -90deg);
                     transform-origin: left center;
                     transition: 1000ms ease-out;
@@ -133,15 +138,78 @@ body {
             /*
             Right wall
             */
-            main section[datatype='room-wrapper'] > div:first-child > div:last-child {
+            main [class='room-wrapper'] > div:first-child > div:last-child {
                 right: 0;
-                justify-content: flex-end;
+                justify-content: center;
                 transform: rotate3d(0, 1, 0, -90.03deg);
                 transform-origin: 100% 50%;
             }
+    [class="beamer-wrapper"] {
+        display: flex;
+        justify-content: space-evenly;
+    }
 
+        [class='beamer'] {
+            transform-style: preserve-3d;
+        }
 
+        [class='beamer'] div {
+            position:absolute;
+            transform-origin: left;
+        }
 
+            [class='beamer__top'] {
+                width: 144px;
+                height: 395px;
+                background: darkgrey;
+                transform: translateZ(43px);
+                top: 41px;
+            }
+
+            [class='beamer__back'] {
+                width: 144px;
+                height: 85px;
+                background: black;
+                transform: rotateX(90deg);
+            }
+
+            [class='beamer__front'] {
+                width: 144px;
+                height: 85px;
+                background: grey;
+                top: 390px;
+                transform: rotateX(90deg);
+            }
+
+            [class='beamer__right'] {
+                width: 42px;
+                height: 425px;
+                background: grey;
+                transform: rotateY(-90deg);
+                left: 144px;
+            }
+
+            [class='beamer__left'] {
+                width: 42px;
+                height: 425px;
+                background: grey;
+                transform: rotateY(-90deg);
+                left: 0;
+            }
+
+            [class="beamer__beam"] {
+                height: 590px;
+                width: 300px;
+                background: white;
+                top: -29px;
+                transform: rotate3d(1,0,0, 90deg) rotate3d(0,0,1,-39deg) translateY(333px) translateX(-44px);
+                clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+                animation: flicker 10ms infinite;
+            }
+
+/*
+ * Input slider
+*/
 input[type=range] {
     -webkit-appearance: none;
     width: 100%;
@@ -227,4 +295,10 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
     background: #9e9191;
+}
+
+
+@keyframes flicker {
+    0%   { opacity: 0.3; }
+    100% { opacity: 0.5; }
 }
