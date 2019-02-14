@@ -11,7 +11,7 @@ document.addEventListener('mousemove', function (e) {
     document.documentElement.style.setProperty('--pos-mouse-y', y + 'deg');
 });
 
-var input = document.querySelector('input');
+var input = document.querySelector('input[class="slider"]');
 
 
 input.addEventListener('input', dimming);

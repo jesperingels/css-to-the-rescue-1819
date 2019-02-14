@@ -11,6 +11,10 @@ body {
     background-color: #cecece;
 }
 
+    [class='site-mobile'] {
+        display:none;
+    }
+
     main {
         position: relative;
         overflow: hidden;
@@ -129,11 +133,11 @@ body {
                 /*
                 Left wall -> div
                 */
-                main [class='room-wrapper'] > div:first-child > div:nth-last-child(2) span:hover {
-                    transform: rotate3d(0, 1, 0, -90deg);
-                    transform-origin: left center;
-                    transition: 1000ms ease-out;
-                }
+                /*main [class='room-wrapper'] > div:first-child > div:nth-last-child(2) span:hover {*/
+                    /*transform: rotate3d(0, 1, 0, -90deg);*/
+                    /*transform-origin: left center;*/
+                    /*transition: 1000ms ease-out;*/
+                /*}*/
 
             /*
             Right wall
@@ -144,6 +148,9 @@ body {
                 transform: rotate3d(0, 1, 0, -90.03deg);
                 transform-origin: 100% 50%;
             }
+
+
+
     [class="beamer-wrapper"] {
         display: flex;
         justify-content: space-evenly;
@@ -199,22 +206,28 @@ body {
 
             [class="beamer__beam-right"] {
                 height: 790px;
-                width: 387px;
+                width: 480px;
                 background: white;
                 top: -100px;
-                transform: rotate3d(1,0,0, 90deg) rotate3d(0,0,1,-41deg) translateY(436px) translateX(-92px);
+                transform: rotate3d(1,0,0, 90deg) rotate3d(0,0,1,-48.3deg) translateY(454px) translateX(-154px);
                 clip-path: polygon(50% 0, 0% 100%, 100% 100%);
                 animation: flicker 10ms infinite;
             }
 
             [class="beamer__beam-left"] {
                 height: 790px;
-                width: 387px;
+                width: 471px;
                 background: white;
                 top: -100px;
-                transform: rotate3d(1,0,0, 90deg) rotate3d(0,0,1,51deg) translateY(380px) translateX(-179px);
+                transform: rotate3d(1,0,0, 90deg) rotate3d(0,0,1,58deg) translateY(380px) translateX(-222px);
                 clip-path: polygon(50% 0, 0% 100%, 100% 100%);
                 animation: flicker 10ms infinite;
+            }
+
+            [class="wall-content"] {
+                padding: 100px;
+                background: white;
+                animation: flicker 1ms infinite;
             }
 
 /*
@@ -312,3 +325,62 @@ input[type=range]:focus::-ms-fill-upper {
     0%   { opacity: 0.3; }
     100% { opacity: 0.5; }
 }
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background-color: white;
+    }
+
+    main {
+        display: none;
+    }
+
+    [class='site-mobile'] {
+        display:block;
+    }
+}
+
+input[type="checkbox"][id="turn-left"]:checked + main,
+input[type="checkbox"][id="turn-right"]:checked + main {
+    perspective: 2000px;
+    transition: 1000ms ease-in-out;
+}
+
+input[type="checkbox"][id="turn-left"]:checked + main > [class='room-wrapper'] {
+    transform:  translate3d(-1872px, 0px, -459px)
+    rotate3d(1, 0, 0, 0deg)
+    rotate3d(0, 1, 0, -90deg)
+    rotate3d(0, 0, 1, 0deg);
+    transition: 1000ms ease-in-out;
+}
+
+input[type="checkbox"][id="turn-left"]:checked + main > [class='room-wrapper'] > div:first-child > div:last-child {
+    display: none;
+}
+
+input[type="checkbox"][id="turn-left"]:checked + main  div[class="beamer__beam-right"] {
+    display: none;
+}
+
+/*****************
+zoom left
+>
+
+section {
+transform:  translate3d(-1872px, 0px, -459px)
+            rotate3d(1, 0, 0, var(--pos-mouse-y))
+            rotate3d(0, 1, 0, -90deg)
+            rotate3d(0, 0, 1, 0deg);
+}
+
+main {
+    perspective: 5000px;
+}
+
+div-right{
+    display:none;
+}
+
+*/
+
