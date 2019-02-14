@@ -197,12 +197,22 @@ body {
                 left: 0;
             }
 
-            [class="beamer__beam"] {
-                height: 590px;
-                width: 300px;
+            [class="beamer__beam-right"] {
+                height: 790px;
+                width: 387px;
                 background: white;
-                top: -29px;
-                transform: rotate3d(1,0,0, 90deg) rotate3d(0,0,1,-39deg) translateY(333px) translateX(-44px);
+                top: -100px;
+                transform: rotate3d(1,0,0, 90deg) rotate3d(0,0,1,-41deg) translateY(436px) translateX(-92px);
+                clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+                animation: flicker 10ms infinite;
+            }
+
+            [class="beamer__beam-left"] {
+                height: 790px;
+                width: 387px;
+                background: white;
+                top: -100px;
+                transform: rotate3d(1,0,0, 90deg) rotate3d(0,0,1,51deg) translateY(380px) translateX(-179px);
                 clip-path: polygon(50% 0, 0% 100%, 100% 100%);
                 animation: flicker 10ms infinite;
             }
