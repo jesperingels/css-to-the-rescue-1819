@@ -341,13 +341,21 @@ input[type=range]:focus::-ms-fill-upper {
     }
 }
 
-input[type="checkbox"][id="turn-left"]:checked + main,
-input[type="checkbox"][id="turn-right"]:checked + main {
+input[id="turn-left"]:checked + main,
+input[id="turn-right"]:checked + main {
     perspective: 2000px;
     transition: 1000ms ease-in-out;
 }
 
-input[type="checkbox"][id="turn-left"]:checked + main > [class='room-wrapper'] {
+input[id="turn-left"]:checked ~ main [class='room-wrapper'] {
+    transform:  translate3d(-1872px, 0px, -459px)
+    rotate3d(1, 0, 0, 0deg)
+    rotate3d(0, 1, 0, -90deg)
+    rotate3d(0, 0, 1, 0deg);
+    transition: 1000ms ease-in-out;
+}
+
+input[id="turn-right"]:checked ~ main [class='room-wrapper'] {
     transform:  translate3d(-1872px, 0px, -459px)
     rotate3d(1, 0, 0, 0deg)
     rotate3d(0, 1, 0, -90deg)
