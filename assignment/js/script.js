@@ -4,8 +4,8 @@ document.addEventListener('mousemove', function (e) {
     let x = e.pageX / 120 - 5;
     let y = e.pageY / 120 - 5;
 
-    console.log('x= ' + x);
-    console.log('y= ' + y);
+    // console.log('x= ' + x);
+    // console.log('y= ' + y);
 
     document.documentElement.style.setProperty('--pos-mouse-x', x + 'deg');
     document.documentElement.style.setProperty('--pos-mouse-y', y + 'deg');
@@ -18,15 +18,32 @@ input.addEventListener('input', dimming);
 
 function dimming() {
     let inputValueHigh, inputValueLow, inputValueMedium, inputValue;
-    inputValue = input.value;
-    inputValueMedium = (input.value / 2) + 25;
-    inputValueLow = input.value / 2 + 10;
-    inputValueHigh = (input.value / 2) + 50;
+
+    let time = new Date();
+    let hours = time.getHours();
+
+    checkDayLight = (h) => {
+        if (h >= 9 && h <= 15) {
+            return ((h-9)/6)
+        } if (h >= 16 && h <= 22) {
+            return 1-((h-16)/6)
+        } if (h<=8 && h>=23) {
+            return 0
+        }
+    };
+
+    inputValue = input.value * checkDayLight(hours);
+    inputValueMedium = (inputValue / 2) + 25;
+    inputValueLow = inputValue / 2 + 10;
+    inputValueHigh = (inputValue / 2) + 50;
 
     document.documentElement.style.setProperty('--bg', inputValueMedium + '%');
     document.documentElement.style.setProperty('--bg-light', inputValueHigh + '%');
     document.documentElement.style.setProperty('--bg-dark', inputValueLow + '%');
-    document.documentElement.style.setProperty('--window-height', inputValue + '%');
+
+    document.querySelector('[data-window]').style.setProperty('background','hsl(192, 100%,'+ checkDayLight(hours)*72 +'%)');
+
+    document.documentElement.style.setProperty('--window-height', input.value + '%');
 }
 
 const inputBat = document.getElementById('battery');
@@ -71,6 +88,10 @@ function batteryLvl() {
         document.querySelector('[datatype="left"]').style.display = 'block';
 
     }
+
+}
+
+function dynamicCycle() {
 
 }
 
