@@ -1,14 +1,19 @@
 :root{
-    --pos-mouse-y:0;
-    --pos-mouse-x:0;
-    --bg:white;
-    --bg-light:white;
-    --bg-dark:white;
+    --pos-mouse-y: 0;
+    --pos-mouse-x: 0;
+    --bg: white;
+    --bg-light: white;
+    --bg-dark: white;
+    --bg-blue: #70e2ff;
+    --window-height: 0;
+    --overal-width: 1300px;
+    --overal-height: 650px;
+
 }
 
 body {
     margin: unset;
-    background-color: #cecece;
+    background-color: white;
 }
 
     [class='site-mobile'] {
@@ -40,8 +45,10 @@ body {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 100vw;
-            height: 100vh;
+            /*width: 100vw;*/
+            /*height: 100vh;*/
+            width: var(--overal-width);
+            height: var(--overal-height);
             margin: -50vh 0 0 -50vw;
             transform-style: preserve-3d;
             font-size: 160px;
@@ -61,12 +68,41 @@ body {
             Back wall
             */
             main [class='room-wrapper'] > div:first-child > div:first-child {
-                width: 100vw;
-                height: 100vh;
+                /*width: 100vw;*/
+                /*height: 100vh;*/
+                height: var(--overal-height);
+                width: var(--overal-width);
                 background-color: hsl(0,0%,var(--bg));
                 box-shadow: 0 0 0 2px #e9e9e9;
                 transform: translate3d(0, 0, -4000px) rotate3d(1,0,0,0.1deg) rotate3d(1,0,0,0deg);
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: flex-start;
             }
+
+                main [class='room-wrapper'] > div:first-child > div:first-child > div:first-child {
+                    height: 300px;
+                    width: 250px;
+                    background: black;
+                    margin-left: 100px;
+                    align-self: flex-start;
+                    display: flex;
+                    align-items: flex-end;
+                }
+                    main [class='room-wrapper'] > div:first-child > div:first-child > div:first-child div:first-child {
+                        height: var(--window-height);
+                        width: 100%;
+                        background: var(--bg-blue);
+                        background-color: hsl(192, 100%, 72%);
+                    }
+
+                    [id="batt-range"] {
+                        align-self: center;
+                        transform: rotate(-90deg);
+                        margin-left: 450px;
+                    }
+
 
 
             /*
@@ -85,7 +121,8 @@ body {
             main [class='room-wrapper'] > div:first-child > div:nth-child(3) {
                 bottom: 100%;
                 top:0;
-                width: 100vw;
+                /*width: 100vw;*/
+                width: var(--overal-width);
                 height: 4000px;
                 /*background: #d0d0d0;*/
                 transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -4000px, 0);
@@ -98,8 +135,9 @@ body {
             */
             main [class='room-wrapper'] > div:first-child > div:nth-child(2) {
                 top: 100%;
-                width: 100vw;
+                /*width: 100vw;*/
                 height: 4000px;
+                width: var(--overal-width);
                 transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -4000px, 0);
                 transform-origin: 50% 0%;
                 display: flex;
@@ -128,6 +166,7 @@ body {
                 justify-content: center;
                 transform: rotate3d(0, 1, 0, 90deg);
                 transform-origin: 0 50%;
+                height: var(--overal-height);
             }
 
                 /*
@@ -147,10 +186,13 @@ body {
                 justify-content: center;
                 transform: rotate3d(0, 1, 0, -90.03deg);
                 transform-origin: 100% 50%;
+                height: var(--overal-height);
             }
 
 
-
+    /*
+    Beamers
+    */
     [class="beamer-wrapper"] {
         display: flex;
         justify-content: space-evenly;
@@ -170,27 +212,27 @@ body {
                 height: 395px;
                 background: darkgrey;
                 transform: translateZ(43px);
-                top: 41px;
-            }
+                top: 0;            }
 
             [class='beamer__back'] {
                 width: 144px;
                 height: 85px;
                 background: black;
                 transform: rotateX(90deg);
+                top: -42px;
             }
 
             [class='beamer__front'] {
                 width: 144px;
                 height: 85px;
                 background: grey;
-                top: 390px;
+                top: 353px;
                 transform: rotateX(90deg);
             }
 
             [class='beamer__right'] {
                 width: 42px;
-                height: 425px;
+                height: 396px;
                 background: grey;
                 transform: rotateY(-90deg);
                 left: 144px;
@@ -198,7 +240,7 @@ body {
 
             [class='beamer__left'] {
                 width: 42px;
-                height: 425px;
+                height: 400px;
                 background: grey;
                 transform: rotateY(-90deg);
                 left: 0;
@@ -212,6 +254,7 @@ body {
                 transform: rotate3d(1,0,0, 90deg) rotate3d(0,0,1,-48.3deg) translateY(454px) translateX(-154px);
                 clip-path: polygon(50% 0, 0% 100%, 100% 100%);
                 animation: flicker 10ms infinite;
+
             }
 
             [class="beamer__beam-left"] {
@@ -222,21 +265,61 @@ body {
                 transform: rotate3d(1,0,0, 90deg) rotate3d(0,0,1,58deg) translateY(380px) translateX(-222px);
                 clip-path: polygon(50% 0, 0% 100%, 100% 100%);
                 animation: flicker 10ms infinite;
+
             }
 
             [class="wall-content"] {
-                padding: 100px;
+                height: 400px;
                 background: white;
-                animation: flicker 1ms infinite;
+                animation: flicker 10ms infinite;
             }
+
+            [id="flicker-l"] {
+                animation: randomFlicker-l 1000ms infinite, flicker 10ms infinite;
+            }
+
+            [id="flicker-r"] {
+                animation: randomFlicker-r 1000ms infinite, flicker 10ms infinite;
+            }
+
+
+/*Animations
+*/
+@keyframes flicker {
+    0%   { opacity: 0.3; }
+    100% { opacity: 0.5; }
+}
+
+@keyframes randomFlicker-l {
+    0% {opacity: 0;}
+    20% {opacity: 0.5;}
+    45% {opacity: 0;}
+    55% {opacity: 0.5;}
+    70% {opacity: 0;}
+    78% {opacity: 0.5;}
+    90% {opacity: 0;}
+    100% {opacity: 0.5;}
+}
+
+@keyframes randomFlicker-r {
+    0% {opacity: 0;}
+    18% {opacity: 0.5;}
+    32% {opacity: 0;}
+    55% {opacity: 0.5;}
+    78% {opacity: 0;}
+    68% {opacity: 0.5;}
+    88% {opacity: 0;}
+    100% {opacity: 0.5;}
+}
 
 /*
  * Input slider
 */
 input[type=range] {
     -webkit-appearance: none;
-    width: 100%;
+    width: 200%;
     margin: 14.5px 0;
+    transform: rotate(90deg) translateY(48px);
 }
 
 input[type=range]:focus {
@@ -247,17 +330,17 @@ input[type=range]::-webkit-slider-runnable-track {
     height: 10px;
     cursor: pointer;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #928483;
+    /*background: #928483;*/
     border-radius: 6.2px;
-    border: 0.9px solid #562425;
+    /*border: 0.9px solid #562425;*/
 }
 input[type=range]::-webkit-slider-thumb {
-    box-shadow: 1px 1px 1px #050000, 0px 0px 1px #1f0000;
+    box-shadow: 1px 1px 1px white, 0px 0px 1px white;
     border: 2.4px solid #000000;
     height: 39px;
     width: 16px;
     border-radius: 2px;
-    background: #651817;
+    background: black;
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -15.4px;
@@ -321,25 +404,9 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 
-@keyframes flicker {
-    0%   { opacity: 0.3; }
-    100% { opacity: 0.5; }
-}
 
-@media screen and (max-width: 768px) {
 
-    body {
-        background-color: white;
-    }
 
-    main {
-        display: none;
-    }
-
-    [class='site-mobile'] {
-        display:block;
-    }
-}
 
 input[id="turn-left"]:checked + main,
 input[id="turn-right"]:checked + main {
@@ -355,21 +422,21 @@ input[id="turn-left"]:checked ~ main [class='room-wrapper'] {
     transition: 1000ms ease-in-out;
 }
 
+input[id="turn-left"]:checked ~ main > [class='room-wrapper'] > div:first-child > div:last-child,
+input[id="turn-right"]:checked ~ main [class='room-wrapper'] > div:first-child > div:nth-last-child(2),
+input[id="turn-left"]:checked ~ main  div[class="beamer__beam-right"],
+input[id="turn-right"]:checked ~ main div[class="beamer__beam-left"]{
+    display: none;
+}
+
 input[id="turn-right"]:checked ~ main [class='room-wrapper'] {
-    transform:  translate3d(-1872px, 0px, -459px)
+    transform:  translate3d(1884px, 0px, -794px)
     rotate3d(1, 0, 0, 0deg)
-    rotate3d(0, 1, 0, -90deg)
+    rotate3d(0, 1, 0, 90deg)
     rotate3d(0, 0, 1, 0deg);
     transition: 1000ms ease-in-out;
 }
 
-input[type="checkbox"][id="turn-left"]:checked + main > [class='room-wrapper'] > div:first-child > div:last-child {
-    display: none;
-}
-
-input[type="checkbox"][id="turn-left"]:checked + main  div[class="beamer__beam-right"] {
-    display: none;
-}
 
 /*****************
 zoom left
@@ -391,4 +458,21 @@ div-right{
 }
 
 */
+
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background-color: white;
+    }
+
+    main {
+        display: none;
+    }
+
+    [class='site-mobile'] {
+        display:block;
+    }
+}
+
 

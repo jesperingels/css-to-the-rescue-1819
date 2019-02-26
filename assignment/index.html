@@ -167,12 +167,16 @@
 		<div>
 
 			<div>
-				<span>
-				</span>
+				<div>
+					<div></div>
+				</div>
+				<span></span>
 				<section>
-					<p style="font-size: 30px">Try me!</p>
-					<label for="myRange"></label>
-					<input type="range" min="1" max="100" value="70" class="slider" id="myRange">
+					<input type="range" min="0" max="100" value="50" class="slider" >
+				</section>
+				<p style="font-size: 30px">Try me!</p>
+				<section id="batt-range">
+					<input type="range" min="0" max="100" value="100" class="slider" id="battery">
 				</section>
 			</div>
 			<div class="beamer-wrapper">
@@ -192,17 +196,19 @@
 					<div class="beamer__beam-right"></div>
 				</section>
 			</div>
+
 			<div>
 				<span>Hello world!</span>
 			</div>
+
 			<div>
-				<span class="wall-content">
+				<section id="wall-left" datatype="left" class="wall-content">
 					<!--<iframe width="743" height="418" src="https://www.youtube.com/embed/2l_GbIdok5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 				Hello World!
-				</span>
+				</section>
 			</div>
 			<div>
-				<span class="wall-content">Hello world!</span>
+				<section id="wall-right" datatype="right" class="wall-content">Hello world!</section>
 				<!--<div style="    position: absolute;-->
     <!--height: 780px;-->
     <!--width: 28vw;-->
