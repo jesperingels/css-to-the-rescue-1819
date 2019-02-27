@@ -327,6 +327,7 @@ input[type=range] {
 input[type=range]:focus {
     outline: none;
 }
+
 input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 10px;
@@ -336,16 +337,31 @@ input[type=range]::-webkit-slider-runnable-track {
     border-radius: 6.2px;
     /*border: 0.9px solid #562425;*/
 }
+
 input[type=range]::-webkit-slider-thumb {
-    box-shadow: 1px 1px 1px white, 0px 0px 1px white;
-    border: 2.4px solid #000000;
-    height: 39px;
-    width: 16px;
-    border-radius: 2px;
-    background: black;
-    cursor: pointer;
     -webkit-appearance: none;
-    margin-top: -15.4px;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
