@@ -13,15 +13,54 @@
 
 }
 
+[class='button'] {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    background: #ff3636;
+    color: whitesmoke;
+    font-size: 0.9em;
+}
+
+[class='button button-control'] {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    background: #ff3636;
+    color: whitesmoke;
+    font-size: 0.9em;
+    height: 35px;
+    margin: 0 25px;
+}
+
+
+[class='button']:hover,
+[class='button button-control']:hover {
+    cursor: pointer;
+}
+
+[class='button']:focus {
+    background: #ff7777;
+}
+
 body {
     margin: unset;
     background-color: white;
     font-family: 'Open Sans', sans-serif;
 }
 
+label {
+    font-size: 33px;
+    text-transform: capitalize;
+}
+
     [class='site-mobile'] {
         display:none;
     }
+
+
 
     main {
         position: relative;
@@ -29,6 +68,16 @@ body {
         width: 100vw;
         height: 100vh;
         perspective: 2000px;
+    }
+
+    [class='control-panel'] {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background: hsla(0, 0%, 100%, 0.2);
+        display: flex;
+        justify-content: center;
     }
 
     main [class='room-wrapper'] {
@@ -48,8 +97,6 @@ body {
             position: absolute;
             top: 50%;
             left: 50%;
-            /*width: 100vw;*/
-            /*height: 100vh;*/
             width: var(--overal-width);
             height: var(--overal-height);
             margin: -50vh 0 0 -50vw;
@@ -101,8 +148,19 @@ body {
 
                     [id="batt-range"] {
                         align-self: center;
-                        transform: rotate(-90deg);
-                        margin-left: 450px;
+                        margin-left: 285px;
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    input[type='range'][id='battery'] {
+                        transform: rotate(0);
+                        background: linear-gradient( red, green);
+
+                    }
+
+                    input[id='battery']::-webkit-slider-runnable-track {
+                        background: linear-gradient( red, green);
                     }
 
 
@@ -272,8 +330,11 @@ body {
 
             [class="wall-content"] {
                 height: 400px;
+                width: 1000px;
                 background: white;
                 animation: flicker 10ms infinite;
+                overflow: scroll;
+                font-size: 16px;
             }
 
             [id="flicker-l"] {
@@ -324,19 +385,6 @@ input[type=range] {
     transform: rotate(90deg) translateY(48px);
 }
 
-input[type=range]:focus {
-    outline: none;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 10px;
-    cursor: pointer;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    /*background: #928483;*/
-    border-radius: 6.2px;
-    /*border: 0.9px solid #562425;*/
-}
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -352,7 +400,7 @@ input[type=range]::-webkit-slider-thumb {
 
 input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
-    height: 8.4px;
+    height: 18.4px;
     cursor: pointer;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
     background: #3071a9;
@@ -364,74 +412,41 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     background: #367ebd;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #9e9191;
-}
 
-/*input[type=range]::-moz-range-track {*/
-    /*width: 100%;*/
-    /*height: 10px;*/
-    /*cursor: pointer;*/
-    /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
-    /*background: #928483;*/
-    /*border-radius: 6.2px;*/
-    /*!*border: 0.9px solid #562425;*!*/
-/*}*/
+/*
+Checkboxes
+*/
 
-/*input[type=range]::-moz-range-thumb {*/
-    /*box-shadow: 1px 1px 1px #050000, 0px 0px 1px #1f0000;*/
-    /*border: 2.4px solid #000000;*/
-    /*height: 39px;*/
-    /*width: 16px;*/
-    /*border-radius: 2px;*/
-    /*!*background: #651817;*!*/
-    /*cursor: pointer;*/
-/*}*/
-
-input[type=range]::-ms-track {
-    width: 100%;
-    height: 10px;
+[id='turn-left'] {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: -206px;
+    right: 0;
+    height: 37px;
+    bottom: 40px;
+    z-index: 99;
+    width: 137px;
+    opacity: 0;
     cursor: pointer;
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
 }
-input[type=range]::-ms-fill-lower {
-    background: #867776;
-    border: 0.9px solid #562425;
-    border-radius: 12.4px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-}
-input[type=range]::-ms-fill-upper {
-    background: #928483;
-    border: 0.9px solid #562425;
-    border-radius: 12.4px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-}
-input[type=range]::-ms-thumb {
-    box-shadow: 1px 1px 1px #050000, 0px 0px 1px #1f0000;
-    border: 2.4px solid #000000;
-    height: 39px;
-    width: 16px;
-    border-radius: 2px;
-    background: #651817;
+
+[id='turn-right'] {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 198px;
+    right: 0;
+    height: 37px;
+    bottom: 40px;
+    z-index: 99;
+    width: 149px;
+    opacity: 0;
     cursor: pointer;
-    height: 10px;
-}
-input[type=range]:focus::-ms-fill-lower {
-    background: #928483;
-}
-input[type=range]:focus::-ms-fill-upper {
-    background: #9e9191;
 }
 
-
-
-
-
-
-input[id="turn-left"]:checked + main,
-input[id="turn-right"]:checked + main {
+input[id="turn-left"]:checked ~ main,
+input[id="turn-right"]:checked ~ main {
     perspective: 2000px;
     transition: 1000ms ease-in-out;
 }
@@ -460,26 +475,10 @@ input[id="turn-right"]:checked ~ main [class='room-wrapper'] {
 }
 
 
-/*****************
-zoom left
->
-
-section {
-transform:  translate3d(-1872px, 0px, -459px)
-            rotate3d(1, 0, 0, var(--pos-mouse-y))
-            rotate3d(0, 1, 0, -90deg)
-            rotate3d(0, 0, 1, 0deg);
+input[id='battery']::-webkit-slider-runnable-track,
+input[id='battery']:focus::-webkit-slider-runnable-track{
+    background: linear-gradient( 90deg, red 5%, green 70% );
 }
-
-main {
-    perspective: 5000px;
-}
-
-div-right{
-    display:none;
-}
-
-*/
 
 
 @media screen and (max-width: 768px) {
@@ -493,6 +492,24 @@ div-right{
         text-align: center;
     }
 
+    [class="wrapper-mobile-button"] {
+        display: flex;
+        justify-content: center;
+    }
+
+    [class="popup"] {
+        position: absolute;
+        background: white;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 25px;
+        display: none;
+        left: 0;
+        width: 88%;
+        right: 0;
+    }
+
     main, input {
         display: none;
     }
@@ -502,5 +519,6 @@ div-right{
     }
 
 }
+
 
 

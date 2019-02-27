@@ -91,8 +91,61 @@ function batteryLvl() {
 
 }
 
-function dynamicCycle() {
+document.getElementById('button-bad').addEventListener('click', () => {
+    document.getElementById('popup1').style.display = 'block';
+});
+
+document.getElementById('pop1-no').addEventListener('click', () => {
+    document.getElementById('popup1').style.display = 'none';
+});
+
+document.getElementById('pop1-yes').addEventListener('click', () => {
+    document.getElementById('popup1').style.display = 'none';
+    document.getElementById('popup2').style.display = 'block';
+});
+
+document.getElementById('pop2-no').addEventListener('click', () => {
+    document.getElementById('popup2').style.display = 'none';
+});
+
+document.getElementById('pop2-yes').addEventListener('click', () => {
+    document.getElementById('popup2').style.display = 'none';
+    document.querySelector('.site-mobile').style.display = 'none';
+    document.querySelector('main').style.display = 'block';
+});
+
+document.getElementById('turn-left').addEventListener('click', rotateRoomLeft);
+document.getElementById('turn-right').addEventListener('click', rotateRoomRight);
+
+var zoomLeft = document.getElementById('zoom-left');
+var zoomRight = document.getElementById('zoom-right');
+
+function rotateRoomLeft() {
+
+    if (zoomLeft.textContent === 'Back') {
+        zoomLeft.textContent = 'Zoom to left wall';
+    } else {
+        zoomLeft.textContent = 'Back';
+    }
+
 
 }
+
+function rotateRoomRight() {
+
+    if (zoomRight.textContent === 'Back') {
+        zoomRight.textContent = 'Zoom to left wall';
+    } else {
+        zoomRight.textContent = 'Back';
+    }
+    
+
+}
+
+// var rotateLeft = document.getElementById('turn-left');
+//
+// if (rotateLeft.checked === true) {
+//     document.getElementById('zoom-left').textContent = 'Back';
+// }
 
 dimming();

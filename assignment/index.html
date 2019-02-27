@@ -9,14 +9,37 @@
 <body>
 
 <div class="site-mobile">
-<section class="mobile-title">
-	<h3>For an optimal experience, please view this website on a larger screen</h3>
-</section>
+<div>
+	<div class="popup" id="popup1">
+		<h4>Are you sure you want a BAD experience?</h4>
+		<div>
+			<button class="button" id="pop1-yes">Yes</button>
+			<button class="button" id="pop1-no">No</button>
+		</div>
+	</div>
+
+	<div class="popup" id="popup2">
+		<h4>Are you REALY sure you want a BAD experience?</h4>
+		<div>
+			<button class="button" id="pop2-yes">Yes</button>
+			<button class="button" id="pop2-no">No</button>
+		</div>
+	</div>
+</div>
+
+	<section class="mobile-title">
+		<h3>For a good experience, please view this website on a larger screen</h3>
+	</section>
+	<div class="wrapper-mobile-button">
+		<button id="button-bad" class="button">I want a BAD experience</button>
+	</div>
+
 </div>
 
 
 <input type="checkbox" id="turn-right">
 <input type="checkbox" id="turn-left">
+
 <main>
 
 	<section datatype="room-wrapper" class="room-wrapper">
@@ -33,6 +56,7 @@
 				</section>
 				<p style="font-size: 30px">Try me!</p>
 				<section id="batt-range">
+					<label>battery level</label>
 					<input type="range" min="0" max="100" value="100" class="slider" id="battery">
 				</section>
 			</div>
@@ -55,13 +79,115 @@
 			</div>
 
 			<div>
-				<span>Hello world!</span>
+				<span></span>
 			</div>
 
 			<div>
 				<section id="wall-left" datatype="left" class="wall-content">
 					<!--<iframe width="743" height="418" src="https://www.youtube.com/embed/2l_GbIdok5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-				Hello World!
+					<div>
+						<section>
+							<video controls="">
+								<source src="/images/six-key.mp4" type="video/mp4">
+								<source src="/images/six-key.webm" type="video/webm">
+							</video>
+						</section>
+						<div>
+							<article>
+								<h1>Add nonsense</h1>
+								<p>Marijn is a software engineer. He can only use his left hand, and with that hand he has difficulty with fine motor control. This means typing can be hard for him. It’s even one of the reasons why he didn’t finish university. He had to write papers. Marijn is incredibly intelligent, so thinking up a paper is very easy. Yet typing it would take him ages.</p>
+								<p>Basically the problem he has with keyboard layouts is that not all keys are next to each other.</p>
+								<figure>
+									<img src="/images/marijn-was.jpg" alt="A keyboard with the letters W, A and S highlighted" />
+									<figcaption>On a QWERTY keyboard it’s easy for him to type the word <em>was</em> because the letters are close to each other.</figcaption>
+								</figure>
+								<figure>
+									<img src="/images/marijn-is.jpg" alt="A keyboard with the letters I and S highlighted" />
+									<figcaption>Typing the word <em>is</em> is much harder though. He will have to move his hand and exactly point it to that one small square.</figcaption>
+								</figure>
+								<p>After observing Marijn using his computer, Rick Buter, a student of mine, explored alternative ways of typing words. What if, Rick thought, you would only need a few keys?</p>
+								<figure>
+									<img src="/images/marijn-prototype.jpg" alt="A keyboard with the letters u, i, o, j, k, and l highlighted" />
+									<figcaption>What if you could type complete sentences by only using the u, i, o, j, k, and l keys?</figcaption>
+								</figure>
+								<p>And so he created a prototype where <a>with only six keys you can type common words.</a><a href="#fn-1" id="fnref-1" title="see footnote" class="footnote"><sup>1</sup></a> On this video you can see me typing the words <em>exclusive design</em>.</p>
+								<h2 id="allowingweirdideas">Allowing weird ideas</h2>
+								<p>At first Rick didn’t dare to mention his idea, let alone create a working prototype. When he first thought of it, it simply seemed too ridiculous. Only when I explicitly asked my students to come up with nonsensical ideas did he dare to make a prototype and test it.</p>
+								<p>When he first showed this prototype to Marijn, he had to laugh indeed. It looked so ridiculous and complicated, it didn&#8217;t seem to make any sense. Yet after trying it a few times he had to conclude that this might actually work. If you want to <a href="https://vasilisvg.github.io/six-key-typing/">you can try the prototype for yourself</a>.</p>
+								<p>Allowing ideas that seem nonsensical into a design proces can lead to innovative products. This is a common ideation method used in many different creative fields. Questlove explains in his book about creativity that some <a>musicians play music backwards in order to come up with completely new sounds</a><a href="#fn-2" id="fnref-2" title="see footnote" class="footnote"><sup>2</sup></a> (not just to listen to hidden satanic messages).</p>
+								<p>My personal interest in nonsense has grown while I was working at a large web design agency. Everything we did there had to make sense, by which I mean that everything had to have an easily measurable effect. More visitors, more money, better performance, simple things like that. And thus we only investigated the obvious. This always gave me the feeling that we were missing out on things.</p>
+								<p>Back in 2010, as a reaction to this professional focus on <em>utility</em> I started a website called <a href="https://lovenonsense.com/">Love Nonsense</a>, in which I blogged about nonsensical, mostly funny but often insightful topics. I have worked on several nonsensical side projects as well. Like this <a>script that translates colour code into written language.</a><a href="#fn-3" id="fnref-3" title="see footnote" class="footnote"><sup>3</sup></a></p>
+								<figure>
+									<img src="/images/rectangle.png" alt="An image of a coloured rectangle"/>
+									<figcaption>A very unsaturated magenta rectangle — very wide and not high at all — on a rather saturated, dark red background</figcaption>
+								</figure>
+								<p>At first this idea of making colour accessible to blind people seemed nonsensical to me, since I assumed blind people can’t see colour. Later it turned out that some blind people can see colour, and others may have memory of it, like I explained in the section about <a href="/fuckups-mama/#assumptionsaboutblindpeople">Assumptions about blind people</a>.</p>
+								<p>Just like the six-key-typing project by Rick Buter, this is an example of using nonsense in order to allow weird ideas, and exploring them. And in these cases they resulted in valuable new insights.</p>
+								<p>Apart from a simple ideation tool to allow weird ideas, there are other reasons to use nonsense as well. Other reasons are lifting ideas beyond the obvious, breaking out of a single rusty context, exploring the unexpected, and of course having fun.</p>
+								<h2 id="fun">Fun</h2>
+								<p>Of course there are serious reasons for allowing nonsense into your design process. But for me the most important reason for using nonsense, and not some other ideation method, is to allow <em>fun</em> into the design process. Designing accessibility, helping disabled people lead an independent life is serious work. But it can be fun as well. And only if we allow fun will we be able to start making pleasurable user interfaces. If we do, maybe some day in the future Léonie Watson will come over to my university again, and this time she will be able to explain what makes an interface fun to use for someone who is blind.</p>
+								<p>And so, by writing about nonsense, we've reached the end of this thesis. <a href="/conclusion/">The only thing that’s left is a conclusion</a>, if there’s any.</p>
+							</article>
+							<aside>
+								<section>
+									<h3>All articles</h3>
+									<p>All articles can be read in a structured order, staring with the context of this reasearch, followed by the things I did and created, and ending with recommendations.</p>
+									<ul>
+										<li>
+											<p><a href="/">Introduction</a></p></li>
+										<li>
+											<p><a href="/everybodys-paradox/">Everybody’s paradox</a></p>
+											<p>The reason why the web is accessible is because it was designed to be used by everyone. The reason why the web isn’t accessible is the same.</p>
+										</li>
+										<li>
+											<p><a href="/the-defaults-suck/">The defaults suck</a></p>
+											<p>Could it be that the web is broken because the defaults our tools use are not very well designed?</p>
+										</li>
+										<li>
+											<p><a href="/flipping-things/">Flipping things</a></p>
+											<p>Inclusive Design as practiced on the web right now could be a nice end goal, but I do think we are not there yet.</p>
+										</li>
+										<li>
+											<p><a href="/fuckups-mama/">Fuckup’s mama</a></p>
+											<p>Tales of guessing how people use their computers. And then, of course, getting it all wrong.</p>
+										</li>
+										<li>
+											<p><a href="/more-death-to-more-bullshit/">More death to more bullshit</a></p>
+											<p>Screen readers tend to talk a lot. Which becomes increasingly annoying with more content. A recalibration of our love for features would be very welcome.</p>
+										</li>
+										<li>
+											<p><a href="/design-like-its-1999/">Design like it’s 1999</a></p>
+											<p>In which Simon Dogger and I wonder why it’s so hard to use the website with all Dutch national television documentaries.</p>
+										</li>
+										<li>
+											<p><a href="/invisible-animations/">Invisible Animations</a></p>
+											<p>In which I tell about the tailor made website and the giggling animations I made for Hannes Wallrafen, the famous blind photographer.</p>
+										</li>
+										<li>
+											<p><a href="/semantics-schmemantics/">Semantics schmemantics</a></p>
+											<p>In which I explain the contrast between web development best practices, and the way our tools present them.</p>
+										</li>
+										<li>
+											<p><a href="/stress-cases/">Stress cases</a></p>
+											<p>Edge cases in software development means that you use the extremes to test with. In Web design it means you ignore the extremes. Calling them stress cases might help.</p>
+										</li>
+										<li>
+											<p><a href="/coders-should-learn-how-to-design/">Coders should learn how to design</a></p>
+											<p>We’re developing expertise in choosing rather than in thinking. If we want an accessible web, we need to start designing.</p>
+										</li>
+										<li>
+											<p><a href="/add-nonsense/">Add nonsense</a></p>
+											<p>Add nonsense, for fun, for surprise, and because we really need to innovate.</p>
+										</li>
+										<li>
+											<p><a href="/conclusion/">Conclusion</a></p>
+											<p>In which I try to reach a conclusion.</p>
+										</li>
+									</ul>
+								</section>
+							</aside>
+						</div>
+					</div>
 				</section>
 			</div>
 			<div>
@@ -73,7 +199,10 @@
 
 	</section>
 
-
+	<div class="control-panel">
+		<button class="button button-control" id="zoom-left">Zoom to left wall</button>
+		<button class="button button-control" id="zoom-right">Zoom to right wall</button>
+	</div>
 </main>
 
 
