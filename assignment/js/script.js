@@ -138,7 +138,7 @@ function rotateRoomRight() {
     } else {
         zoomRight.textContent = 'Back';
     }
-    
+
 
 }
 
