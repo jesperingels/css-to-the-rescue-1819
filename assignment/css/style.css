@@ -45,6 +45,10 @@
     background: #ff7777;
 }
 
+[id="hypno"] {
+    width: 100%;
+}
+
 body {
     margin: unset;
     background-color: white;
