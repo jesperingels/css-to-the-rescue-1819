@@ -337,12 +337,58 @@ label {
                 font-size: 16px;
             }
 
+            [id="button-next"] {
+                display: block;
+                position: absolute;
+                right: 38%;
+                background: white;
+                padding: 5px 10px;
+                border-radius: 50px;
+                border: 1px black solid;
+                bottom: 72px;
+                font-size: 17px;
+                font-weight: bold;
+            }
+
+            [id='button-next']:hover,
+            [id="button-prev"]:hover {
+                cursor: pointer;
+            }
+
+            [id="button-prev"] {
+                display: block;
+                position: absolute;
+                right: 60%;
+                background: white;
+                padding: 5px 10px;
+                border-radius: 50px;
+                border: 1px black solid;
+                bottom: 72px;
+                font-size: 17px;
+                font-weight: bold;
+            }
+
+
+
+            [class='wall-content'] div:first-child {
+                overflow: scroll;
+                height: 400px;
+                width: 1000px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             [id="flicker-l"] {
                 animation: randomFlicker-l 1000ms infinite, flicker 10ms infinite;
             }
 
             [id="flicker-r"] {
                 animation: randomFlicker-r 1000ms infinite, flicker 10ms infinite;
+            }
+
+            [id="video"] {
+                display: none;
             }
 
 
@@ -467,7 +513,7 @@ input[id="turn-right"]:checked ~ main div[class="beamer__beam-left"]{
 }
 
 input[id="turn-right"]:checked ~ main [class='room-wrapper'] {
-    transform:  translate3d(1884px, 0px, -794px)
+    transform:  translate3d(1884px, 0px, -387px)
     rotate3d(1, 0, 0, 0deg)
     rotate3d(0, 1, 0, 90deg)
     rotate3d(0, 0, 1, 0deg);

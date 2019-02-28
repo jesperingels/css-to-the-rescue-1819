@@ -22,17 +22,24 @@ function dimming() {
     let time = new Date();
     let hours = time.getHours();
 
-    checkDayLight = (h) => {
+    console.log(hours);
+
+    const checkDayLight = (h) => {
         if (h >= 9 && h <= 15) {
             return ((h-9)/6)
         } if (h >= 16 && h <= 22) {
             return 1-((h-16)/6)
-        } if (h<=8 && h>=23) {
+        }else {
             return 0
         }
     };
 
+
+
     inputValue = input.value * checkDayLight(hours);
+
+    console.log(inputValue);
+
     inputValueMedium = (inputValue / 2) + 25;
     inputValueLow = inputValue / 2 + 10;
     inputValueHigh = (inputValue / 2) + 50;
@@ -76,6 +83,11 @@ function batteryLvl() {
         document.querySelector('[datatype="right"]').style.display = 'none';
 
     } else {
+
+        if (!document.getElementById('turn-left').checked) {
+            document.querySelector('.beamer__beam-right').style.display = 'block';
+            document.querySelector('[datatype="right"]').style.display = 'block';
+        }
         document.querySelector('.beamer__beam-right').style.display = 'block';
         document.querySelector('[datatype="right"]').style.display = 'block';
     }
@@ -84,9 +96,10 @@ function batteryLvl() {
         document.querySelector('.beamer__beam-left').style.display = 'none';
         document.querySelector('[datatype="left"]').style.display = 'none';
     } else {
-        document.querySelector('.beamer__beam-left').style.display = 'block';
-        document.querySelector('[datatype="left"]').style.display = 'block';
-
+        if (!document.getElementById('turn-right').checked) {
+            document.querySelector('.beamer__beam-left').style.display = 'block';
+            document.querySelector('[datatype="left"]').style.display = 'block';
+        }
     }
 
 }
@@ -110,8 +123,11 @@ document.getElementById('pop2-no').addEventListener('click', () => {
 
 document.getElementById('pop2-yes').addEventListener('click', () => {
     document.getElementById('popup2').style.display = 'none';
-    document.querySelector('.site-mobile').style.display = 'none';
-    document.querySelector('main').style.display = 'block';
+    document.getElementById('popup3').style.display = 'block';
+});
+
+document.getElementById('pop3-ok').addEventListener('click', () => {
+    document.getElementById('popup3').style.display = 'none';
 });
 
 document.getElementById('turn-left').addEventListener('click', rotateRoomLeft);
@@ -138,14 +154,60 @@ function rotateRoomRight() {
     } else {
         zoomRight.textContent = 'Back';
     }
-
-
 }
 
-// var rotateLeft = document.getElementById('turn-left');
-//
-// if (rotateLeft.checked === true) {
-//     document.getElementById('zoom-left').textContent = 'Back';
-// }
 
 dimming();
+
+document.addEventListener('click', ()=>{
+
+    var content = document.getElementById('content');
+    var video = document.getElementById('video');
+    var next = document.getElementById('button-next');
+    var prev = document.getElementById('button-prev');
+
+    content.classList.add('active');
+
+    if (content.className === 'active') {
+        next.addEventListener('click', ()=>{
+            video.style.display = 'block';
+            content.style.display = 'none';
+
+            content.classList.remove('active');
+            video.classList.add('active');
+        });
+
+        prev.addEventListener('click', ()=>{
+            video.style.display = 'block';
+            content.style.display = 'none';
+
+            content.classList.remove('active');
+            video.classList.add('active');
+        });
+
+    }
+
+    if(video.className === 'active') {
+        next.addEventListener('click', ()=>{
+            video.style.display = 'none';
+            content.style.display = 'block';
+
+            video.classList.remove('active');
+            content.classList.add('active');
+        });
+
+        prev.addEventListener('click', ()=>{
+            video.style.display = 'none';
+            content.style.display = 'block';
+
+            video.classList.remove('active');
+            content.classList.add('active');
+        });
+
+    }
+
+
+});
+
+
+
