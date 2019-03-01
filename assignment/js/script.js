@@ -162,55 +162,55 @@ dimming();
 
 
 // Dit hele block kan sws met CSS
-document.addEventListener('click', ()=>{
+// document.addEventListener('click', ()=>{
+//
+//     var content = document.getElementById('content');
+//     var video = document.getElementById('video');
+//     var next = document.getElementById('button-next');
+//     var prev = document.getElementById('button-prev');
+//
+//     content.classList.add('active');
+//
+//     if (content.className === 'active') {
+//         next.addEventListener('click', ()=>{
+//             video.style.display = 'block';
+//             content.style.display = 'none';
+//
+//             content.classList.remove('active');
+//             video.classList.add('active');
+//         });
+//
+//         prev.addEventListener('click', ()=>{
+//             video.style.display = 'block';
+//             content.style.display = 'none';
+//
+//             content.classList.remove('active');
+//             video.classList.add('active');
+//         });
+//
+//     }
+//
+//     if(video.className === 'active') {
+//         next.addEventListener('click', ()=>{
+//             video.style.display = 'none';
+//             content.style.display = 'block';
+//
+//             video.classList.remove('active');
+//             content.classList.add('active');
+//         });
+//
+//         prev.addEventListener('click', ()=>{
+//             video.style.display = 'none';
+//             content.style.display = 'block';
+//
+//             video.classList.remove('active');
+//             content.classList.add('active');
+//         });
+//
+//     }
 
-    var content = document.getElementById('content');
-    var video = document.getElementById('video');
-    var next = document.getElementById('button-next');
-    var prev = document.getElementById('button-prev');
-
-    content.classList.add('active');
-
-    if (content.className === 'active') {
-        next.addEventListener('click', ()=>{
-            video.style.display = 'block';
-            content.style.display = 'none';
-
-            content.classList.remove('active');
-            video.classList.add('active');
-        });
-
-        prev.addEventListener('click', ()=>{
-            video.style.display = 'block';
-            content.style.display = 'none';
-
-            content.classList.remove('active');
-            video.classList.add('active');
-        });
-
-    }
-
-    if(video.className === 'active') {
-        next.addEventListener('click', ()=>{
-            video.style.display = 'none';
-            content.style.display = 'block';
-
-            video.classList.remove('active');
-            content.classList.add('active');
-        });
-
-        prev.addEventListener('click', ()=>{
-            video.style.display = 'none';
-            content.style.display = 'block';
-
-            video.classList.remove('active');
-            content.classList.add('active');
-        });
-
-    }
 
 
-});
 
 
 

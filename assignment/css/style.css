@@ -233,6 +233,28 @@ label {
                 height: var(--overal-height);
             }
 
+                [id='wall-prev'] {
+                    position: absolute;
+                    top: 84%;
+                    z-index: 999;
+                    left: 37.6%;
+                    width: 91px;
+                    height: 24px;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
+                [id='wall-next'] {
+                    position: absolute;
+                    top: 84%;
+                    z-index: 999;
+                    left: 60.6%;
+                    width: 49px;
+                    height: 24px;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
                 /*
                 Left wall -> div
                 */
@@ -344,10 +366,11 @@ label {
                 display: block;
                 position: absolute;
                 right: 38%;
-                background: white;
+                color: #fff;
+                background: transparent;
                 padding: 5px 10px;
                 border-radius: 50px;
-                border: 1px black solid;
+                border: 1px white solid;
                 bottom: 72px;
                 font-size: 17px;
                 font-weight: bold;
@@ -362,13 +385,14 @@ label {
                 display: block;
                 position: absolute;
                 right: 60%;
-                background: white;
+                background: #424242;
                 padding: 5px 10px;
                 border-radius: 50px;
-                border: 1px black solid;
+                border: 1px white solid;
                 bottom: 72px;
                 font-size: 17px;
                 font-weight: bold;
+                color: white;
             }
 
             [class='wall-content'] div:first-child {
@@ -492,6 +516,9 @@ Checkboxes
     cursor: pointer;
 }
 
+/*
+Rotate Room
+*/
 input[id="turn-left"]:checked ~ main,
 input[id="turn-right"]:checked ~ main {
     perspective: 2000px;
@@ -521,7 +548,47 @@ input[id="turn-right"]:checked ~ main [class='room-wrapper'] {
     transition: 1000ms ease-in-out;
 }
 
+/*
+next content (left wall)
+*/
+input[id='wall-next']:checked ~ div:first-child [id='video'] {
+    display: block;
+}
 
+input[id='wall-next']:checked ~ div:first-child [id='content'] {
+    display: none;
+}
+
+input[id='wall-next']:checked ~ [id='button-next']{
+    background: #424242;
+}
+
+input[id='wall-next']:checked ~ [id='button-prev'] {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+input[id='wall-next']:checked
+
+
+
+/*
+previous content (left wall)
+*/
+
+input[id='wall-prev']:checked ~ div:first-child [id='video'] {
+    display: none;
+}
+
+input[id='wall-prev']:checked ~ div:first-child [id='content'] {
+    display: block;
+}
+
+
+    /*
+    Battery input style
+    */
 input[id='battery']::-webkit-slider-runnable-track,
 input[id='battery']:focus::-webkit-slider-runnable-track{
     background: linear-gradient( 90deg, red 5%, green 70% );
