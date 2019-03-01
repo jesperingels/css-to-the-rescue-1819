@@ -84,10 +84,9 @@ function batteryLvl() {
 
     } else {
 
-        if (!document.getElementById('turn-left').checked) {
-            document.querySelector('.beamer__beam-right').style.display = 'block';
-            document.querySelector('[datatype="right"]').style.display = 'block';
-        }
+        document.querySelector('.beamer__beam-right').style.display = 'block';
+        document.querySelector('[datatype="right"]').style.display = 'block';
+
         document.querySelector('.beamer__beam-right').style.display = 'block';
         document.querySelector('[datatype="right"]').style.display = 'block';
     }
@@ -96,14 +95,14 @@ function batteryLvl() {
         document.querySelector('.beamer__beam-left').style.display = 'none';
         document.querySelector('[datatype="left"]').style.display = 'none';
     } else {
-        if (!document.getElementById('turn-right').checked) {
-            document.querySelector('.beamer__beam-left').style.display = 'block';
-            document.querySelector('[datatype="left"]').style.display = 'block';
-        }
+        document.querySelector('.beamer__beam-left').style.display = 'block';
+        document.querySelector('[datatype="left"]').style.display = 'block';
     }
 
 }
 
+
+// Doe dit in CSS, checkbox hack
 document.getElementById('button-bad').addEventListener('click', () => {
     document.getElementById('popup1').style.display = 'block';
 });
@@ -130,6 +129,8 @@ document.getElementById('pop3-ok').addEventListener('click', () => {
     document.getElementById('popup3').style.display = 'none';
 });
 
+
+// Kijk of dit met CSS kan.
 document.getElementById('turn-left').addEventListener('click', rotateRoomLeft);
 document.getElementById('turn-right').addEventListener('click', rotateRoomRight);
 
@@ -159,6 +160,8 @@ function rotateRoomRight() {
 
 dimming();
 
+
+// Dit hele block kan sws met CSS
 document.addEventListener('click', ()=>{
 
     var content = document.getElementById('content');
