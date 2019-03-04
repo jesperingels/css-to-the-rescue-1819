@@ -101,113 +101,37 @@ function batteryLvl() {
 
 }
 
+// document.getElementById('start-mobile').addEventListener('click', setInterval(function unCheck() { return document.getElementById('start-mobile').checked = false;} , 3000));
 
 // Doe dit in CSS, checkbox hack
-document.getElementById('button-bad').addEventListener('click', () => {
-    document.getElementById('popup1').style.display = 'block';
-});
-
-document.getElementById('pop1-no').addEventListener('click', () => {
-    document.getElementById('popup1').style.display = 'none';
-});
-
-document.getElementById('pop1-yes').addEventListener('click', () => {
-    document.getElementById('popup1').style.display = 'none';
-    document.getElementById('popup2').style.display = 'block';
-});
-
-document.getElementById('pop2-no').addEventListener('click', () => {
-    document.getElementById('popup2').style.display = 'none';
-});
-
-document.getElementById('pop2-yes').addEventListener('click', () => {
-    document.getElementById('popup2').style.display = 'none';
-    document.getElementById('popup3').style.display = 'block';
-});
-
-document.getElementById('pop3-ok').addEventListener('click', () => {
-    document.getElementById('popup3').style.display = 'none';
-});
-
-
-// Kijk of dit met CSS kan.
-document.getElementById('turn-left').addEventListener('click', rotateRoomLeft);
-document.getElementById('turn-right').addEventListener('click', rotateRoomRight);
-
-var zoomLeft = document.getElementById('zoom-left');
-var zoomRight = document.getElementById('zoom-right');
-
-function rotateRoomLeft() {
-
-    if (zoomLeft.textContent === 'Back') {
-        zoomLeft.textContent = 'Zoom to left wall';
-    } else {
-        zoomLeft.textContent = 'Back';
-    }
-
-
-}
-
-function rotateRoomRight() {
-
-    if (zoomRight.textContent === 'Back') {
-        zoomRight.textContent = 'Zoom to left wall';
-    } else {
-        zoomRight.textContent = 'Back';
-    }
-}
+// document.getElementById('button-bad').addEventListener('click', () => {
+//     document.getElementById('popup1').style.display = 'block';
+// });
+//
+// document.getElementById('pop1-no').addEventListener('click', () => {
+//     document.getElementById('popup1').style.display = 'none';
+// });
+//
+// document.getElementById('pop1-yes').addEventListener('click', () => {
+//     document.getElementById('popup1').style.display = 'none';
+//     document.getElementById('popup2').style.display = 'block';
+// });
+//
+// document.getElementById('pop2-no').addEventListener('click', () => {
+//     document.getElementById('popup2').style.display = 'none';
+// });
+//
+// document.getElementById('pop2-yes').addEventListener('click', () => {
+//     document.getElementById('popup2').style.display = 'none';
+//     document.getElementById('popup3').style.display = 'block';
+// });
+//
+// document.getElementById('pop3-ok').addEventListener('click', () => {
+//     document.getElementById('popup3').style.display = 'none';
+// });
 
 
 dimming();
-
-
-// Dit hele block kan sws met CSS
-// document.addEventListener('click', ()=>{
-//
-//     var content = document.getElementById('content');
-//     var video = document.getElementById('video');
-//     var next = document.getElementById('button-next');
-//     var prev = document.getElementById('button-prev');
-//
-//     content.classList.add('active');
-//
-//     if (content.className === 'active') {
-//         next.addEventListener('click', ()=>{
-//             video.style.display = 'block';
-//             content.style.display = 'none';
-//
-//             content.classList.remove('active');
-//             video.classList.add('active');
-//         });
-//
-//         prev.addEventListener('click', ()=>{
-//             video.style.display = 'block';
-//             content.style.display = 'none';
-//
-//             content.classList.remove('active');
-//             video.classList.add('active');
-//         });
-//
-//     }
-//
-//     if(video.className === 'active') {
-//         next.addEventListener('click', ()=>{
-//             video.style.display = 'none';
-//             content.style.display = 'block';
-//
-//             video.classList.remove('active');
-//             content.classList.add('active');
-//         });
-//
-//         prev.addEventListener('click', ()=>{
-//             video.style.display = 'none';
-//             content.style.display = 'block';
-//
-//             video.classList.remove('active');
-//             content.classList.add('active');
-//         });
-//
-//     }
 
 
 

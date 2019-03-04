@@ -367,7 +367,7 @@ label {
                 position: absolute;
                 right: 38%;
                 color: #fff;
-                background: transparent;
+                background: #424242;
                 padding: 5px 10px;
                 border-radius: 50px;
                 border: 1px white solid;
@@ -385,7 +385,7 @@ label {
                 display: block;
                 position: absolute;
                 right: 60%;
-                background: #424242;
+                background: transparent;
                 padding: 5px 10px;
                 border-radius: 50px;
                 border: 1px white solid;
@@ -548,28 +548,60 @@ input[id="turn-right"]:checked ~ main [class='room-wrapper'] {
     transition: 1000ms ease-in-out;
 }
 
+input[id="turn-left"]:checked ~ main div[class='control-panel'] [id='zoom-left'],
+input[id="turn-right"]:checked ~ main div[class='control-panel'] [id='zoom-right'] {
+    visibility: hidden;
+}
+
+input[id="turn-left"]:checked ~ main div[class='control-panel'] [id='zoom-left']::after,
+input[id="turn-right"]:checked ~ main div[class='control-panel'] [id='zoom-right']::after {
+    visibility: visible;
+}
+
+[id='zoom-left']:after {
+    content: 'Back';
+    visibility: hidden;
+    background: #ff3636;
+    padding: 8px 15px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translateX(-85px);
+    top: 0;
+}
+
+[id='zoom-right']:after {
+    content: 'Back';
+    visibility: hidden;
+    background: #ff3636;
+    padding: 8px 15px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translateX(-85px);
+    top: 0;
+}
+
 /*
 next content (left wall)
 */
-input[id='wall-next']:checked ~ div:first-child [id='video'] {
+input[id='wall-next']:checked ~ div > div > section[id='video'] {
     display: block;
 }
 
-input[id='wall-next']:checked ~ div:first-child [id='content'] {
+input[id='wall-next']:checked ~ div > div > div[id='content'] {
     display: none;
 }
 
 input[id='wall-next']:checked ~ [id='button-next']{
-    background: #424242;
+    background: transparent;
 }
 
 input[id='wall-next']:checked ~ [id='button-prev'] {
-    background: transparent;
+    background: #424242;
     color: white;
     border: 1px solid white;
 }
 
-input[id='wall-next']:checked
+/*input[id='wall-next']:checked*/
 
 
 
@@ -628,8 +660,75 @@ input[id='battery']:focus::-webkit-slider-runnable-track{
         display: none;
     }
 
-    [class='site-mobile'] {
+    [class='site-mobile'],
+    input[type='radio'] {
         display:block;
+    }
+
+    [class='mobile-title'] h4 {
+        display:none;
+    }
+
+
+
+    /*
+    Checkboxes
+    */
+
+    input[name='pop1'] ,input[name='pop2'], input[name='pop3'] {
+        display: none;
+    }
+
+    [id='start-mobile'] {
+        position: absolute;
+        left: 26%;
+        top: 14%;
+        cursor: pointer;
+        width: 179px;
+        height: 30px;
+        opacity: 0;
+    }
+
+    input[id='start-mobile']:checked ~ div > [id='popup1'],
+    input[id='start-mobile']:checked ~ input[name='pop1'] {
+        display: block;
+    }
+
+    input[id='start-mobile']:checked ~ section[class='mobile-title'] h4 {
+        display: block;
+    }
+
+    [id='in-pop1-yes'] {
+        position: absolute;
+        top: 17%;
+        z-index: 9999;
+        left: 37%;
+        height: 30px;
+        width: 46px;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    [id='in-pop1-no'] {
+        position: absolute;
+        top: 17%;
+        z-index: 9999;
+        left: 51%;
+        height: 30px;
+        width: 46px;
+        opacity: 0;
+        cursor: pointer;
+
+    }
+
+    input[id='in-pop1-no']:checked ~ div > [id='popup1'],
+    input[id='in-pop2-no']:checked ~ div > [id='popup2'],
+    input[id='in-pop1-yes']:checked {
+        display: none;
+    }
+
+    input[id='in-pop1-yes']:checked ~ div > [id='popup2'] {
+        display: block;
     }
 
 }
