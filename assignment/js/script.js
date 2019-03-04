@@ -101,36 +101,6 @@ function batteryLvl() {
 
 }
 
-// document.getElementById('start-mobile').addEventListener('click', setInterval(function unCheck() { return document.getElementById('start-mobile').checked = false;} , 3000));
-
-// Doe dit in CSS, checkbox hack
-// document.getElementById('button-bad').addEventListener('click', () => {
-//     document.getElementById('popup1').style.display = 'block';
-// });
-//
-// document.getElementById('pop1-no').addEventListener('click', () => {
-//     document.getElementById('popup1').style.display = 'none';
-// });
-//
-// document.getElementById('pop1-yes').addEventListener('click', () => {
-//     document.getElementById('popup1').style.display = 'none';
-//     document.getElementById('popup2').style.display = 'block';
-// });
-//
-// document.getElementById('pop2-no').addEventListener('click', () => {
-//     document.getElementById('popup2').style.display = 'none';
-// });
-//
-// document.getElementById('pop2-yes').addEventListener('click', () => {
-//     document.getElementById('popup2').style.display = 'none';
-//     document.getElementById('popup3').style.display = 'block';
-// });
-//
-// document.getElementById('pop3-ok').addEventListener('click', () => {
-//     document.getElementById('popup3').style.display = 'none';
-// });
-
-
 dimming();
 
 

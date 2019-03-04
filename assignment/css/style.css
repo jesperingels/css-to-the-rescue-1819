@@ -675,7 +675,8 @@ input[id='battery']:focus::-webkit-slider-runnable-track{
     Checkboxes
     */
 
-    input[name='pop1'] ,input[name='pop2'], input[name='pop3'] {
+    input[name='pop1'] ,input[name='pop2'], input[name='pop3'],
+    input[id='start-mobile']:checked{
         display: none;
     }
 
@@ -690,45 +691,69 @@ input[id='battery']:focus::-webkit-slider-runnable-track{
     }
 
     input[id='start-mobile']:checked ~ div > [id='popup1'],
-    input[id='start-mobile']:checked ~ input[name='pop1'] {
+    input[id='start-mobile']:checked ~ input[name='pop1'],
+    input[id='in-pop1-yes']:checked ~ input[name='pop2'],
+    input[id='in-pop2-yes']:checked ~ input[name='pop3'] {
+
         display: block;
     }
+
 
     input[id='start-mobile']:checked ~ section[class='mobile-title'] h4 {
         display: block;
     }
 
-    [id='in-pop1-yes'] {
+    [id='in-pop1-yes'],
+    [id='in-pop2-yes']{
+        left: 37%;
+    }
+
+    [id='in-pop1-no'],
+    [id='in-pop2-no'] {
+        left: 51%;
+    }
+
+    [id='in-pop3-ok'] {
+        left:44%;
+        top: 79%!important;
+    }
+
+    [class='mobile-popup'] {
         position: absolute;
         top: 17%;
         z-index: 9999;
-        left: 37%;
         height: 30px;
         width: 46px;
         opacity: 0;
         cursor: pointer;
     }
 
-    [id='in-pop1-no'] {
-        position: absolute;
-        top: 17%;
-        z-index: 9999;
-        left: 51%;
-        height: 30px;
-        width: 46px;
-        opacity: 0;
-        cursor: pointer;
-
+    input[id='in-pop1-no']:checked,
+    input[id='in-pop2-no']:checked,
+    input[id='in-pop1-yes']:checked,
+    input[id='in-pop1-yes']:checked ~ [id='in-pop1-no'],
+    input[id='in-pop2-no']:checked,
+    input[id='in-pop2-yes']:checked ~ [id='in-pop2-no'] {
+        display: none!important;
     }
 
     input[id='in-pop1-no']:checked ~ div > [id='popup1'],
     input[id='in-pop2-no']:checked ~ div > [id='popup2'],
-    input[id='in-pop1-yes']:checked {
+    input[id='in-pop1-yes']:checked ~ div > [id='popup1'],
+    input[id='in-pop2-no']:checked ~ div > [id='popup2'],
+    input[id='in-pop2-yes']:checked ~ div > [id='popup2']
+    {
         display: none;
     }
 
-    input[id='in-pop1-yes']:checked ~ div > [id='popup2'] {
+    input[id='in-pop1-yes']:checked ~ div > [id='popup2'],
+    input[id='in-pop2-yes']:checked ~ div > [id='popup3']{
         display: block;
+    }
+
+    input[id='in-pop3-ok']:checked ~ div > [id='popup3'],
+    input[id='in-pop3-ok']:checked ~ div > [id='popup2'] {
+        display: none;
     }
 
 }
