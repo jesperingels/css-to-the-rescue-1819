@@ -9,7 +9,10 @@
 <body>
 <!--
 Assignment: Create a website with a light and dark mode
-
+Rules:
+-You may not use the .class or #id selectors
+-Design responds to weather
+-Design responds to battery level
 -->
 
 <div class="site-mobile">
@@ -245,6 +248,7 @@ Assignment: Create a website with a light and dark mode
 								--overal-height: 650px;
 							}
 
+
 							[class='button'] {
 								padding: 8px 15px;
 								border: none;
@@ -368,6 +372,7 @@ Assignment: Create a website with a light and dark mode
 								justify-content: flex-start;
 							}
 
+
 							main [class='room-wrapper'] > div:first-child > div:first-child > div:first-child {
 								height: 300px;
 								width: 250px;
@@ -381,6 +386,15 @@ Assignment: Create a website with a light and dark mode
 								height: var(--window-height);
 								width: 100%;
 								background-color: hsl(192, 100%, 72%);
+							}
+
+							main [class='room-wrapper'] > div:first-child > div:first-child > div:first-child:before {
+								content: 'The light entering from this window responds to the current time. So if you\'re viewing this website at night, it will be very dark in this room!';
+								display: block;
+								font-size: 24px;
+								position: absolute;
+								top: 50%;
+								width: 405px;
 							}
 
 							[id="batt-range"] {
